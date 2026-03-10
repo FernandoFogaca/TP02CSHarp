@@ -1,0 +1,32 @@
+@page
+@model TP02CSharp.Pages.CityManager.CreateCountryModel
+
+<h2>Create a Country</h2>
+
+<form method="post">
+
+    <div>
+        <label>Country Name</label>
+
+        <input asp-for="Input.CountryName" />
+
+    </div>
+
+    <div>
+        <label>Country Code</label>
+
+        <input asp-for="Input.CountryCode" />
+     
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+@if (Model.CreatedCountry != null)
+{
+    <p>
+        Country created: 
+        <strong>@Model.CreatedCountry.CountryName (@Model.CreatedCountry.CountryCode)</strong>
+    </p>
+}

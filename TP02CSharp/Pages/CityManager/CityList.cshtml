@@ -1,0 +1,19 @@
+@page
+@model TP02CSharp.Pages.CityManager.CityListModel
+
+<h2>City List</h2>
+
+<p>Select a city to view more details.</p>
+
+<ul>
+
+    @foreach (var city in Model.Cities)
+    {
+        <li>
+            <a asp-page="/CityManager/CityDetails" asp-route-cityName="@city">
+                @city
+            </a>
+        </li>
+    }
+
+</ul>

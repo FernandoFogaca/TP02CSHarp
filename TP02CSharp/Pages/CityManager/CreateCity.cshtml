@@ -1,0 +1,20 @@
+@page
+@model TP02CSharp.Pages.CityManager.CreateCityModel
+
+<h2>Register a City</h2>
+
+<form method="post">
+
+    <div>
+        <label>City Name</label>
+        <input type="text" asp-for="CityName" />
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+@if (Model.CityName != null)
+{
+    <p>The city submitted was: <strong>@Model.CityName</strong></p>
+}

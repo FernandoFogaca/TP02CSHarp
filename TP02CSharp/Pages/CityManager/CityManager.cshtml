@@ -1,0 +1,43 @@
+@page
+@model TP02CSharp.Pages.CityManager.CreateCountryCustomValidationModel
+
+<h2>Country Validation Example</h2>
+
+<form method="post">
+
+    <div>
+
+        <label>Country Name</label>
+
+        <input asp-for="Input.CountryName" />
+
+        <span asp-validation-for="Input.CountryName"></span>
+
+    </div>
+
+    <div>
+
+        <label>Country Code</label>
+
+        <input asp-for="Input.CountryCode" />
+
+        <span asp-validation-for="Input.CountryCode"></span>
+
+    </div>
+
+    <button type="submit">Create</button>
+
+</form>
+
+@if (Model.CreatedCountry != null)
+{
+    <p>
+        Country created:
+        <strong>@Model.CreatedCountry.CountryName (@Model.CreatedCountry.CountryCode)</strong>
+    </p>
+}
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

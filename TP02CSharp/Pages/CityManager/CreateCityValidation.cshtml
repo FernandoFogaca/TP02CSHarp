@@ -1,0 +1,33 @@
+@page 
+
+@model TP02CSharp.Pages.CityManager.CreateCityValidationModel 
+
+<h2>Register a City (Server Validation)</h2> 
+
+<form method="post"> 
+
+    <div>
+        <label>City Name</label> 
+
+        <input asp-for="Input.CityName" /> 
+        
+
+        <span asp-validation-for="Input.CityName"></span>
+       
+    </div>
+
+    <button type="submit">Submit</button> 
+
+</form>
+
+@if (Model.ResultMessage != null) 
+
+{
+    <p>@Model.ResultMessage</p>
+    
+    @section Scripts
+    {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

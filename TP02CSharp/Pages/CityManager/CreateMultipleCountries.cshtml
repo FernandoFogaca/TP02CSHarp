@@ -1,0 +1,38 @@
+@page
+@model TP02CSharp.Pages.CityManager.CreateMultipleCountriesModel
+
+<h2>Register Several Countries</h2>
+
+<form method="post">
+
+    @for (int i = 0; i < 5; i++)
+    {
+        <div style="margin-bottom:10px">
+
+            <label>Country Name</label>
+            <input asp-for="Countries[i].CountryName" />
+
+            <label>Code</label>
+            <input asp-for="Countries[i].CountryCode" />
+
+        </div>
+    }
+
+    <button type="submit">Submit Countries</button>
+
+</form>
+
+@if (Model.SubmittedCountries != null && Model.SubmittedCountries.Count > 0)
+{
+    <h3>Countries submitted</h3>
+
+    <ul>
+        @foreach (var country in Model.SubmittedCountries)
+        {
+            if (!string.IsNullOrWhiteSpace(country.CountryName))
+            {
+                <li>@country.CountryName (@country.CountryCode)</li>
+            }
+        }
+    </ul>
+}

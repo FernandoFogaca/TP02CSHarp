@@ -1,0 +1,26 @@
+@page
+@model TP02CSharp.Pages.CityManager.ReadNotesModel
+
+<h2>Saved Notes</h2>
+
+<p>Select a file to read its contents.</p>
+
+<ul>
+
+    @foreach (var note in Model.Notes)
+    {
+        <li>
+            <a asp-page="/CityManager/ReadNotes" asp-route-fileName="@note">
+                @note
+            </a>
+        </li>
+    }
+
+</ul>
+
+@if (Model.Content != null)
+{
+    <h3>File Content</h3>
+
+    <pre>@Model.Content</pre>
+}

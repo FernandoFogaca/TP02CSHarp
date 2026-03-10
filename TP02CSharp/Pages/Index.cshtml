@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+
+<h1>TP02 Razor Pages </h1>
+
+<p>
+    This small project was created to practise some core features of ASP.NET Core Razor Pages,
+    such as model binding, validation, routing and simple file handling.
+</p>
+
+<h3>City examples</h3>
+
+<ul>
+    <li><a asp-page="/CityManager/CreateCity">Exercise 1  Create a City (BindProperty)</a></li>
+    <li><a asp-page="/CityManager/CreateCityHandler">Exercise 2  Create a City using Handler Parameters</a></li>
+    <li><a asp-page="/CityManager/CreateCityValidation">Exercise 3 & 4 – City Validation</a></li>
+</ul>
+
+<h3>Country examples</h3>
+
+<ul>
+    <li><a asp-page="/CityManager/CreateCountry">Exercise 5 – Create Country</a></li>
+    <li><a asp-page="/CityManager/CreateCountryValidation">Exercise 6 – Country Code Validation</a></li>
+    <li><a asp-page="/CityManager/CreateMultipleCountries">Exercise 7 – Multiple Countries</a></li>
+</ul>
+
+<h3>Routing</h3>
+
+<ul>
+    <li><a asp-page="/CityManager/CityList">Exercise 8   City Routing Example</a></li>
+    <li>
+        <a asp-page="/CityManager/CityList">
+            Exercise 9  Dynamic City Links
+        </a>
+    </li>
+    
+</ul>
+
+<h3>Files</h3>
+
+<ul>
+    <li><a asp-page="/CityManager/SaveNote">Exercise 10  Save a Note</a></li>
+    <li><a asp-page="/CityManager/ReadNotes">Exercise 11  Read Notes</a></li>
+    <li>
+        <a asp-page="/CityManager/CreateCountryCustomValidation">
+            Exercise 12  Custom Country Validation
+        </a>
+    </li>
+</ul>
